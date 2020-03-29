@@ -4,11 +4,9 @@ export const state = () => ({
 
 export const actions = {
   async fetchCat({ commit }) {
-    const cat = await (await fetch('https://aws.random.cat/meow'))
-      .json()
-      .then((res) => {
-        return res.file
-      })
+    const cat = await fetch('https://llnl1.herokuapp.com/')
+      .then((res) => res.json())
+      .then((res) => res.file)
 
     commit('SAVE_CAT', cat)
   }
