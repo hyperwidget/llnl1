@@ -12,6 +12,9 @@
         No other internal dependency
       </card>
     </div>
+    <card>
+      <img :src="cat" />
+    </card>
   </section>
 </template>
 
@@ -23,6 +26,14 @@ export default {
 
   components: {
     Card
+  },
+  async fetch({ store, params }) {
+    await store.dispatch('demo/fetchCat')
+  },
+  computed: {
+    cat() {
+      return this.$store.state.demo?.cat
+    }
   }
 }
 </script>
