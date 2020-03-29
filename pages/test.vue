@@ -4,7 +4,7 @@
       <card title="Free" icon="github-circle">
         HI
         <a href="https://github.com/buefy/buefy">
-          GitHub
+          GitHub test
         </a>
       </card>
 
